@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   learncicd:
-    image: niputuputri/learnci-cd
+    image: dwitaputri/mjs
     build:
       context: .
       dockerfile: ./Dockerfile
