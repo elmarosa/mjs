@@ -41,7 +41,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-            cd /home/abu/mjs
+            cd /home/abu/mjs/mjs
             git pull origin main
             docker compose -f docker-compose.yml down
             docker pull dwitaputri/mjs
