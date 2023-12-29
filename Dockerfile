@@ -1,7 +1,13 @@
-FROM ubuntu:latest
+FROM golang:1.17-alpine
 
-COPY . /app
+WORKDIR /app
 
-EXPOSE 4000
+COPY go.mod ./
+COPY *.go ./
+COPY static ./static
+
+RUN go build -o /mjs
+
+EXPOSE 3000
 
 CMD ["/mjs"]
